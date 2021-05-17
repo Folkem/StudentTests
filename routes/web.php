@@ -12,4 +12,6 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::redirect('/', RouteServiceProvider::HOME);
     Route::view(RouteServiceProvider::HOME, 'home');
+
+    Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 });

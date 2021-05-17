@@ -4,7 +4,7 @@
             <a href="#">Вчителі</a>
         </div>
         <div>
-            <a href="#">Вийти</a>
+            <a href="{{ route('logout') }}">Вийти</a>
         </div>
     </div>
 </div>
