@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TeacherController;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,8 @@ Route::middleware('auth')->group(function () {
     Route::view(RouteServiceProvider::HOME, 'home');
 
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+
+    Route::middleware('role:admin')->group(function () {
+        Route::resource('teachers', TeacherController::class)->except('show');
+    });
 });
