@@ -11,5 +11,5 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::redirect('/', RouteServiceProvider::HOME);
-    Route::view('hello', 'hello');
+    Route::view(RouteServiceProvider::HOME, 'home');
 });
