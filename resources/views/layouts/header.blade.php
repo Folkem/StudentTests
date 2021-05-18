@@ -1,5 +1,8 @@
 <div class="w-full p-4 h-auto fixed">
-    <div class="flex flex-row gap-4 justify-end">
+    <div class="flex flex-row gap-4 justify-end pr-8">
+        <div>
+            <a href="{{ route('groups.index') }}">Групи</a>
+        </div>
         <div>
             <a href="{{ route('teachers.index') }}">Вчителі</a>
         </div>

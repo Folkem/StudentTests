@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TeacherController;
 use App\Providers\RouteServiceProvider;
@@ -18,5 +19,6 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('role:admin')->group(function () {
         Route::resource('teachers', TeacherController::class)->except('show');
+        Route::resource('groups', GroupController::class)->except('show');
     });
 });
