@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TeacherController;
@@ -21,4 +22,5 @@ Route::middleware('auth')->group(function () {
         Route::resource('teachers', TeacherController::class)->except('show');
         Route::resource('groups', GroupController::class)->except('show');
     });
+    Route::resource('disciplines', DisciplineController::class)->except('show');
 });
