@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             GroupSeeder::class,
             DisciplineSeeder::class,
+            ControlTypeSeeder::class,
         ]);
     }
 }
