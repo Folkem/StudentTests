@@ -4,6 +4,7 @@ use App\Http\Controllers\DisciplineController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TestController;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,5 @@ Route::middleware('auth')->group(function () {
         Route::resource('groups', GroupController::class)->except('show');
     });
     Route::resource('disciplines', DisciplineController::class)->except('show');
+    Route::resource('tests', TestController::class)->except(['edit', 'update']);
 });
