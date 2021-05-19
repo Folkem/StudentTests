@@ -18,6 +18,7 @@ class CreateTestsTable extends Migration
             $table->string('title');
             $table->foreignId('group_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('discipline_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('control_type_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->integer('time_in_minutes');
             $table->double('grade');
             $table->timestamps();
