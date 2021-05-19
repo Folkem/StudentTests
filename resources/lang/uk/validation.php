@@ -148,6 +148,7 @@ return [
         'grade'                 => 'Кількість балів',
         'control_type'          => 'Тип контролю',
         'group'                 => 'Група',
-        'discipline'                 => 'Дисципліна',
+        'discipline'            => 'Дисципліна',
+        'questions_file'        => 'Файл з запитаннями',
     ],
 ];

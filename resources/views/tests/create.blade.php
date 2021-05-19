@@ -23,7 +23,7 @@
                     {{ session('message') }}
                 </div>
             @endif
-            <form action="{{ route('tests.store') }}" method="post"
+            <form action="{{ route('tests.store') }}" method="post" enctype="multipart/form-data"
                   class="flex flex-col gap-4">
                 @csrf
                 <div>
@@ -84,8 +84,8 @@
                     </select>
                 </div>
                 <div>
-                    <label for="questions-file" class="text-lg pl-2 pb-2">Файл з питаннями та відповідями: </label>
-                    <input type="file" id="questions-file" name="questions-file"
+                    <label for="questions_file" class="text-lg pl-2 pb-2">Файл з питаннями та відповідями: </label>
+                    <input type="file" id="questions_file" name="questions_file" accept="text/plain"
                         class="px-2 py-2">
                 </div>
                 <div>
