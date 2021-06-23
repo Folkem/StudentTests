@@ -5,7 +5,7 @@
 @section('body')
     @include('layouts.header')
 
-    <div class="w-1/2 h-full pt-20 m-auto flex flex-col gap-4">
+    <div class="w-1/2 pt-20 m-auto flex flex-col gap-4">
         <div class="text-center font-bold text-2xl">
             Тести
         </div>

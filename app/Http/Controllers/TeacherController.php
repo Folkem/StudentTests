@@ -31,7 +31,7 @@ class TeacherController extends Controller
                 'required',
                 'string',
                 'between:3,255',
-                'unique:users,email'
+                'unique:users,name'
             ],
             'password' => 'required|string|between:3,255|confirmed'
         ]);
@@ -42,7 +42,7 @@ class TeacherController extends Controller
             'role_id' => Role::query()->where('name', 'teacher')->first()->id
         ]);
 
-        return back()->with('message', 'Вчитель успішно додан.');
+        return back()->with('message', 'Викладач успішно додан.');
     }
 
     public function edit(User $teacher)
@@ -76,7 +76,7 @@ class TeacherController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return back()->with('message', 'Вчитель успішно оновлений.');
+        return back()->with('message', 'Викладач успішно оновлений.');
     }
 
     public function destroy(User $teacher): RedirectResponse

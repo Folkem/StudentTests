@@ -7,7 +7,7 @@
 
     <div class="w-1/2 h-full pt-20 m-auto flex flex-col gap-4">
         <div class="text-center font-bold text-2xl">
-            Результати тестування "{{ $testing->count() }}"
+            Результати тестування "{{ $testing->test->title }}"
         </div>
         <a class="text-center italic text-xl cursor-pointer rounded-2xl border-gray-400 hover:bg-gray-200 px-4
             hover:border-black border-2 w-max mx-auto" href="{{ route('results.teacher.export', $testing) }}">

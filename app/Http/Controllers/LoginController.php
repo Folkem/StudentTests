@@ -42,6 +42,7 @@ class LoginController extends Controller
             'name' => $request->input('name'),
             'password' => Hash::make($request->input('password')),
             'role_id' => 3,
+            'group_id' => $request->input('group_id'),
         ]);
 
         /** @noinspection PhpParamsInspection */
@@ -65,13 +66,13 @@ class LoginController extends Controller
             ]);
         }
 
-        return redirect('/');
+        return redirect(route('home'));
     }
 
     public function logout()
     {
         auth()->logout();
 
-        return redirect('/');
+        return redirect(route('home'));
     }
 }

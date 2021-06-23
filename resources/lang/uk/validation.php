@@ -150,5 +150,6 @@ return [
         'group'                 => 'Група',
         'discipline'            => 'Дисципліна',
         'questions_file'        => 'Файл з запитаннями',
+        'group_id'              => 'Група',
     ],
 ];

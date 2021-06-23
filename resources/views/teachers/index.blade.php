@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
-@section('title', 'Вчителі')
+@section('title', 'Викладачі')
 
 @section('body')
     @include('layouts.header')
 
     <div class="w-1/2 h-full pt-20 m-auto flex flex-col gap-4">
         <div class="text-center font-bold text-2xl">
-            Вчителі
+            Викладачі
         </div>
         <a href="{{ route('teachers.create') }}"
             class="w-6/12 p-2 bg-green-400 hover:bg-green-500 text-white font-bold mx-auto text-center">
-            Додати вчителя
+            Додати викладача
         </a>
         @if($teachers->count() == 0)
             <div class="text-center mx-auto italic mt-20">
-                Вчителів ще нема.
+                Викладачів ще нема.
             </div>
         @else
             <div class="w-full flex flex-col gap-2 mt-20">

@@ -39,7 +39,7 @@ class TestingController extends Controller
     {
         $userHasResult = $testing->results()->where('user_id', auth()->id())->exists();
         if (!$testing->continues() || $userHasResult) {
-            return redirect('home');
+            return redirect(route('home'));
         }
 
         $result = Result::query()->create([
@@ -60,7 +60,7 @@ class TestingController extends Controller
             }
         }
 
-        return redirect('home');
+        return redirect(route('home'));
     }
 
     public function teacherStart(Test $test)

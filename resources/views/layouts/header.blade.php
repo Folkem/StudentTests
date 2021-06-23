@@ -1,4 +1,4 @@
-<div class="w-full p-4 h-auto fixed">
+<div class="w-full p-4 h-auto top-0 sticky bg-gray-100">
     <div class="flex flex-row gap-4 justify-end pr-8">
         <div>
             <a href="{{ route('home') }}">Домашня</a>
@@ -8,7 +8,7 @@
                 <a href="{{ route('groups.index') }}">Групи</a>
             </div>
             <div>
-                <a href="{{ route('teachers.index') }}">Вчителі</a>
+                <a href="{{ route('teachers.index') }}">Викладачі</a>
             </div>
             <div>
                 <a href="{{ route('students.index') }}">Студенти</a>
