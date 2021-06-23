@@ -20,5 +20,8 @@ class RoleSeeder extends Seeder
         Role::query()->create([
             'name' => 'teacher',
         ]);
+        Role::query()->create([
+            'name' => 'student',
+        ]);
     }
 }

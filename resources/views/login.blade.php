@@ -38,6 +38,9 @@
                     </button>
                 </div>
             </form>
+            <a href="{{ route('register.index') }}" class="italic text-sm text-center">
+                Хочу зареєструватися (я студент)
+            </a>
         </div>
     </div>
 @endsection
