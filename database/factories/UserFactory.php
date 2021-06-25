@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Group;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -23,10 +24,11 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $roleName = $this->faker->boolean(90) ? 'student' : 'teacher';
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'role_id' => Role::query()->where('name', 'teacher')->first('id'),
+            'name' => $this->faker->unique()->name(),
+            'role_id' => Role::query()->where('name', $roleName)->first('id'),
+            'group_id' => $roleName === 'student' ? Group::all()->random()->id : null,
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ];
     }

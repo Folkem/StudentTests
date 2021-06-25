@@ -32,4 +32,9 @@ class Test extends Model
     {
         return $this->belongsTo(ControlType::class);
     }
+
+    public function testings(): HasMany
+    {
+        return $this->hasMany(Testing::class);
+    }
 }

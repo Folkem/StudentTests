@@ -22,7 +22,7 @@ class AnswerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' => $this->faker->realTextBetween(10, 100)
         ];
     }
 }

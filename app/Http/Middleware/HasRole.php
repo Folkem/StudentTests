@@ -15,9 +15,10 @@ class HasRole
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next, string $role)
+    public function handle(Request $request, Closure $next, string ...$roles)
     {
-        if (auth()->guest() || auth()->user()->role->name !== $role) {
+        /** @noinspection PhpUndefinedFieldInspection */
+        if (auth()->guest() || !in_array(auth()->user()->role->name, $roles)) {
             return redirect(RouteServiceProvider::HOME);
         }
 

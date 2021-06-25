@@ -51,6 +51,11 @@
                             <div class="py-1 text-center bg-green-400 hover:bg-green-500 rounded-lg">
                                 <a href="{{ route('tests.show', $test) }}" class="w-full block">Переглянути</a>
                             </div>
+                            <div class="py-1 text-center bg-blue-400 hover:bg-blue-500 rounded-lg">
+                                <a href="{{ route('testings.teacher.start', $test) }}" class="w-full block">
+                                    Розпочати тестування
+                                </a>
+                            </div>
                             <div class="py-1 text-center bg-red-400 hover:bg-red-500 rounded-lg">
                                 <form action="{{ route('tests.destroy', $test) }}" method="post" class="w-full">
                                     @csrf

@@ -11,6 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
+        "shuchkin/simplexlsxgen": "1.0.11",
+        "ext-json": "*",
         "laravel-lang/lang": "8.1.0"
     },
     "require-dev": {

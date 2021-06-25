@@ -15,18 +15,13 @@ class GroupSeeder extends Seeder
     public function run()
     {
         $specialities = [
-            'КН', 'БС', 'БО', 'ФК', 'ТО', 'ПР', 'ЗВ'
+            'КН', 'БС',
         ];
 
         $groups = [];
 
         foreach ($specialities as $speciality) {
-            $groups[] = "$speciality-11";
-            $groups[] = "$speciality-21";
-            $groups[] = "$speciality-31";
             $groups[] = "$speciality-41";
-            $groups[] = "{$speciality}з-11";
-            $groups[] = "{$speciality}з-21";
             $groups[] = "{$speciality}з-31";
         }
 
