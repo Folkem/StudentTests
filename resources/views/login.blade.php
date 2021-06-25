@@ -21,9 +21,9 @@
                   class="flex flex-col gap-4 p-4" autocomplete="on">
                 @csrf
                 <div class="flex flex-col gap-2">
-                    <label for="email" class="text-lg">Ваша пошта: </label>
-                    <input type="text" id="email" name="email" autocomplete="email"
-                           required placeholder="Пошта"
+                    <label for="name" class="text-lg">Ваше ім'я: </label>
+                    <input type="text" id="name" name="name" autocomplete="name"
+                           required placeholder="Ім'я"
                            class="w-full p-2 border-gray-300 border-2">
                 </div>
                 <div class="flex flex-col gap-2">

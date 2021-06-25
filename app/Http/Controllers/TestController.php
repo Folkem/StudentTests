@@ -11,6 +11,7 @@ use App\Models\Test;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
@@ -59,13 +60,13 @@ class TestController extends Controller
         $fileContents = $request->file('questions_file')->get();
 
         $test = Test::query()->create([
-                'title' => $request->input('title'),
-                'group_id' => $request->input('group'),
-                'discipline_id' => $request->input('discipline'),
-                'control_type_id' => $request->input('control_type'),
-                'time_in_minutes' => $request->input('time_in_minutes'),
-                'grade' => $request->input('grade'),
-            ]);
+            'title' => $request->input('title'),
+            'group_id' => $request->input('group'),
+            'discipline_id' => $request->input('discipline'),
+            'control_type_id' => $request->input('control_type'),
+            'time_in_minutes' => $request->input('time_in_minutes'),
+            'grade' => $request->input('grade'),
+        ]);
 
         try {
             $currentQuestion = null;
@@ -103,10 +104,10 @@ class TestController extends Controller
         return view('tests.show', compact('test'));
     }
 
-    public function destroy(Test $test): RedirectResponse
+    public function destroy(Test $test): Response
     {
         $test->delete();
 
-        return back();
+        return response()->noContent();
     }
 }

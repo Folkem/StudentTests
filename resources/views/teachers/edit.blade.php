@@ -34,12 +34,6 @@
                            class="w-full p-2 border-gray-300 border-2">
                 </div>
                 <div>
-                    <label for="email" class="text-lg pl-2 pb-2">E-mail адреса: </label>
-                    <input type="text" id="email" name="email" required placeholder="Пошта"
-                           value="{{ old('email') ?: $teacher->email }}"
-                           class="w-full p-2 border-gray-300 border-2">
-                </div>
-                <div>
                     <label for="old_password" class="text-lg pl-2 pb-2">Старий пароль: </label>
                     <input type="password" id="old_password" name="old_password" required placeholder="Старий пароль"
                            class="w-full p-2 border-gray-300 border-2">

@@ -27,10 +27,9 @@ class TeacherController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => 'required|string|between:3,255',
-            'email' => [
+            'name' => [
                 'required',
-                'email',
+                'string',
                 'between:3,255',
                 'unique:users,email'
             ],
@@ -39,7 +38,6 @@ class TeacherController extends Controller
 
         User::query()->create([
             'name' => $request->input('name'),
-            'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
             'role_id' => Role::query()->where('name', 'teacher')->first()->id
         ]);
@@ -55,12 +53,11 @@ class TeacherController extends Controller
     public function update(Request $request, User $teacher): RedirectResponse
     {
         $request->validate([
-            'name' => 'required|string|between:3,255',
-            'email' => [
+            'name' => [
                 'required',
-                'email',
+                'string',
                 'between:3,255',
-                Rule::unique('users', 'email')->ignore($teacher->email, 'email'),
+                Rule::unique('users', 'name')->ignore($teacher->name, 'name'),
             ],
             'old_password' => [
                 'required',
@@ -76,7 +73,6 @@ class TeacherController extends Controller
 
         $teacher->update([
             'name' => $request->input('name'),
-            'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
 

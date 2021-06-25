@@ -23,9 +23,6 @@
                     <div class="w-full p-4 border-gray-200 border-2 rounded-lg flex flex-row">
                         <div class="w-10/12 text-lg flex flex-col gap-2">
                             <div>
-                                <b>Пошта:</b> {{ $teacher->email }}
-                            </div>
-                            <div>
                                 <b>Ім'я:</b> {{ $teacher->name }}
                             </div>
                         </div>
